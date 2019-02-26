@@ -12,12 +12,20 @@ class Two extends One {
     }
 }
 
+class Three extends Two {
+    void print_step() {
+        System.out.println("steps");
+    }
+}
+
+
 class Main {
     public static void main(String[] args) {
-        Two inno = new Two();
+        Three inno = new Three();
         inno.print_java();
         inno.print_for();
         inno.print_java();
+        inno.print_step();
 
     }
 }
