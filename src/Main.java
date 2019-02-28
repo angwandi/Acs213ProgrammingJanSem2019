@@ -1,41 +1,32 @@
 
-class Account {
-    void print_account() {
-        System.out.println("Account");
+// Create a MyClass class
+class MyClass {
+    int x;  // Create a class attribute
+
+    // Create a class constructor for the MyClass class
+    public MyClass() {
+        x = 5;  // Set the initial value for the class attribute x
     }
 
-}
-
-class Savings extends Account {
-    void print_savings() {
-        System.out.println("Savings");
-    }
-
-}
-
-class Rates extends Account {
-    void print_rates() {
-        System.out.println("Rates");
-    }
-}
-
-class Balance extends Account {
-    void print_balance() {
-        System.out.println("Balance");
-    }
-}
-
-
-class Main {
     public static void main(String[] args) {
-        Savings savings = new Savings();
-        savings.print_account();
-        savings.print_savings();
-        Rates rates = new Rates();
-        rates.print_account();
-        rates.print_rates();
-        Balance balance = new Balance();
-        balance.print_account();
-        balance.print_balance();
+        MyClass myObj = new MyClass(); // Create an object of class MyClass (This will call the constructor)
+        System.out.println(myObj.x); // Print the value of x
+    }
+
+}
+
+class Car {
+    int modelYear;
+    String modelName;
+    //Parameterized constructor
+
+    public Car(int year, String name) {
+        modelYear = year;
+        modelName = name;
+    }
+
+    public static void main(String[] args) {
+        Car myCar = new Car(1969, "Mustang");
+        System.out.println(myCar.modelYear + " " + myCar.modelName);
     }
 }
